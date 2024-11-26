@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Alumno</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #87CEFA, #011d3a); /* Gradiente claro arriba, oscuro abajo */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        /* Contenedor principal */
+        .container {
+            margin: 20px;
+        }
+    
+        /* Botones superiores con imágenes */
+        .btn-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+    
+        .btn-row img {
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+    
+        .btn-row img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+    
+        /* Botones inferiores */
+        .btn-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+    
+        .btn-column button {
+            width: 200px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+    
+        .btn-column button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+    
+        /* Adaptación para visibilidad en el gradiente */
+        h2 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para contraste */
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Bienvenido Alumno</h2>
+
+        <!-- Botones superiores -->
+        <div class="btn-row">
+            <img src="papel.png" alt="Normas" onclick="location.href='normas.html'">
+            <img src="trans.png" alt="Transporte" onclick="location.href='transporte.html'">
+            <img src="peligro.png" alt="Emergencia" onclick="location.href='emergencia.html'">
+        </div>
+
+        <!-- Botones inferiores -->
+        <div class="btn-column">
+            <button onclick="location.href='comu.html'">Comunicación</button>
+            <button onclick="location.href='lu.html'">Lugares de interés</button>
+            <button onclick="location.href='check.html'">Check-in</button>
+        </div>
+    </div>
+</body>
+</html>

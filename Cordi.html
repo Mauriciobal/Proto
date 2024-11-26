@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COORDINADOR</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #87CEFA, #011d3a); /* Gradiente claro arriba, oscuro abajo */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        h2 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    
+        /* Contenedor principal */
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 400px;
+            margin: auto;
+        }
+    
+        /* Botones inferiores */
+        .btn-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    
+        .btn-column button {
+            width: 220px;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff; /* Letras azules */
+            background-color: #fff; /* Fondo blanco */
+            border: 2px solid #007bff;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+        }
+    
+        .btn-column button:hover {
+            background-color: #e0e8ff; /* Suave azul claro */
+            transform: translateY(-3px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+        }
+    
+        .btn-column button:active {
+            transform: scale(0.98);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+    
+        /* Responsivo */
+        @media (max-width: 480px) {
+            .btn-column button {
+                width: 180px;
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Bienvenido Coordinador</h2>
+
+        <!-- Botones inferiores -->
+        <div class="btn-column">
+            <button onclick="location.href='comu.html'">Comunicación</button>
+            <button onclick="location.href='check.html'">Check-in</button>
+        </div>
+    </div>
+</body>
+</html>

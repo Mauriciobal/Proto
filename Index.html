@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Prototipo</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Contenedor del formulario */
+        .form-container {
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        /* Estilo del logotipo */
+        .form-container img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Títulos */
+        .form-container h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de los inputs */
+        .form-container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Botón de inicio de sesión */
+        .form-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Mensajes de error */
+        .alert {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <!-- Agregamos el logotipo -->
+        <img src="logo.png" alt="Logotipo">
+
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <label for="email">Correo:</label><br>
+            <input type="email" id="email" name="email" placeholder="Escribe tu correo" required><br>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p class="alert" id="errorMessage"></p>
+    </div>
+
+    <script>
+        // Función para redirigir según el correo
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Evita el envío del formulario tradicional
+            
+            // Obtiene el valor del correo
+            const email = document.getElementById("email").value.toLowerCase();
+            const errorMessage = document.getElementById("errorMessage");
+            errorMessage.textContent = ""; // Limpia el mensaje de error
+
+            // Valida el contenido del correo y redirige
+            if (email.includes("coo.mx")) {
+                window.location.href = "Cordi.html";
+            } else if (email.includes("tec.mx")) {
+                window.location.href = "Alumno.html";
+            } else if (email.includes("par.mx")) {
+                window.location.href = "Padre.html";
+            } else {
+                errorMessage.textContent = "El correo no corresponde a un rol válido.";
+            }
+        });
+    </script>
+</body>
+</html>
+

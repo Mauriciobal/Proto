@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Reglamentos Civiles</title>
+    <style>
+        /* Estilos generales para la página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .search-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            width: 80%;
+            max-width: 600px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .resources {
+            margin-top: 40px;
+        }
+
+        .resource-item {
+            margin: 10px 0;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .resource-item:hover {
+            background-color: #bdc3c7;
+            transform: translateY(-5px);
+        }
+
+        .resource-item a {
+            text-decoration: none;
+            color: #2980b9;
+            font-size: 18px;
+        }
+
+        .resource-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Consultar Reglamentos Civiles</h1>
+
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Buscar reglamentos civiles..." />
+        <button onclick="searchRegulations()">Buscar</button>
+    </div>
+
+    <div class="resources">
+        <div class="resource-item">
+            <a href="https://www.gob.mx/constitucion/" target="_blank">Constitución Política del País</a>
+        </div>
+        <div class="resource-item">
+            <a href="https://www.gob.mx/leyes-y-reglamentos" target="_blank">Leyes y Reglamentos Generales</a>
+        </div>
+        <div class="resource-item">
+            <a href="https://www.diputados.gob.mx/LeyesBiblio/abrogar" target="_blank">Reglamentos Específicos</a>
+        </div>
+        <div class="resource-item">
+            <a href="https://www.gob.mx/justicia/" target="_blank">Acceso a la Justicia y Reglamentos Civiles</a>
+        </div>
+    </div>
+
+    <script>
+        function searchRegulations() {
+            var query = document.getElementById('search').value.toLowerCase();
+            if(query) {
+                alert("Realizando búsqueda de reglamentos civiles relacionados con: " + query);
+                // Aquí puedes integrar un motor de búsqueda real o redirigir a un sitio de búsqueda
+            } else {
+                alert("Por favor, ingresa un término de búsqueda.");
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Transporte para Estudiantes Internacionales</title>
+    <style>
+        /* Estilos generales para la página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background-color: #f4f7f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+
+        .transport-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ecf0f1;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .transport-option:hover {
+            background-color: #dfe6e9;
+        }
+
+        .transport-option img {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+        }
+
+        .transport-details {
+            flex: 1;
+            padding-left: 20px;
+            font-size: 1.1em;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sistema de Transporte para Estudiantes Internacionales</h1>
+
+    <div class="container">
+        <div class="section-title">Opciones de Transporte para Viajar</div>
+
+        <!-- Opción de Autobús -->
+        <div class="transport-option">
+            <img src="bus.png" alt="Bus">
+            <div class="transport-details">
+                <strong>Autobús</strong><br>
+                Transporte económico y conveniente para recorridos largos o cortos dentro de la ciudad. Ideal para estudiantes que necesitan un transporte regular.
+            </div>
+            <button onclick="window.open('https://www.example.com/bus')">Ver Más</button>
+        </div>
+
+        <!-- Opción de Tren -->
+        <div class="transport-option">
+            <img src="tren.png" alt="Train">
+            <div class="transport-details">
+                <strong>Tren</strong><br>
+                Servicio rápido y eficiente, especialmente útil para recorrer grandes distancias entre ciudades. Confortable para trayectos largos.
+            </div>
+            <button onclick="window.open('https://www.example.com/train')">Ver Más</button>
+        </div>
+
+        <!-- Opción de Metro -->
+        <div class="transport-option">
+            <img src="metro.png" alt="Metro">
+            <div class="transport-details">
+                <strong>Metro</strong><br>
+                Ideal para moverse rápidamente dentro de áreas urbanas. Económico y rápido, adecuado para estudiantes que viven en ciudades grandes.
+            </div>
+            <button onclick="window.open('https://www.example.com/metro')">Ver Más</button>
+        </div>
+
+        <!-- Opción de Taxi -->
+        <div class="transport-option">
+            <img src="taxi.png" alt="Taxi">
+            <div class="transport-details">
+                <strong>Taxi</strong><br>
+                Transporte privado, ideal para viajes cortos o cuando se requiere comodidad y rapidez. Se puede compartir con otros estudiantes.
+            </div>
+            <button onclick="window.open('https://www.example.com/taxi')">Ver Más</button>
+        </div>
+
+        <!-- Opción de Bicicleta -->
+        <div class="transport-option">
+            <img src="bici.png" alt="Bicicleta">
+            <div class="transport-details">
+                <strong>Bicicleta</strong><br>
+                Una opción ecológica y económica para moverse por la ciudad. A menudo disponible a través de servicios de alquiler de bicicletas.
+            </div>
+            <button onclick="window.open('https://www.example.com/bike')">Ver Más</button>
+        </div>
+
+        <div class="button-container">
+            <button onclick="window.location.href='https://www.example.com/transport-info'">Más Opciones de Transporte</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Sistema de Transporte para Estudiantes Internacionales</p>
+    </div>
+
+</body>
+</html>
